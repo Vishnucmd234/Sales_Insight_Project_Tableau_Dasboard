@@ -1,9 +1,25 @@
-
-# Sales Insight Data Analysis Tabuler
+# Sales Insight Project
 
 End-to-end sales analytics build: raw CSV data cleaned and modeled in **PostgreSQL**, then visualized in an interactive **Tableau** dashboard. Built on the widely-used **AtliQ Hardware "Sales Insights"** practice dataset — a hardware distributor operating across Indian markets.
 
-**Live dashboard:** [Tableau Public →](https://public.tableau.com/app/profile/vishnu.suthar8037/viz/SalesInsightProject_17876414266870/Dashboard1)
+## Dashboard
+
+[![View Live Dashboard](https://img.shields.io/badge/Tableau-View%20Live%20Dashboard-E97627?style=for-the-badge&logo=tableau&logoColor=white)](https://public.tableau.com/app/profile/vishnu.suthar8037/viz/SalesInsightProject_17876414266870/Dashboard1)
+
+<img src="dashboard-preview.png" alt="Sales Insight Dashboard preview" width="900"/>
+
+*GitHub renders READMEs as static markdown, so the interactive workbook can't be embedded directly on this page — click the badge above to open the live Tableau dashboard and filter/hover/drill down yourself.*
+
+**Worksheets:** Revenue · Sales Quantity · Revenue by Markets · Sales Quantity by Market · Top 5 Customers · Top 10 Products · Year · Month · Revenue by Year · Dashboard 1
+
+**Visuals on Dashboard 1:**
+- KPI cards — Total Revenue, Sales Quantity
+- Bar chart — Revenue by Market
+- Bar chart — Sales Quantity by Market
+- Line chart — Revenue by Month, split by year (2017–2020)
+- Bar chart — Top 5 Products
+- Bar chart — Top 5 Customers
+- Year / Month filters for time-based drill-down
 
 ## Tech Stack
 - **PostgreSQL** — raw data storage, cleaning, keys, indexing, reporting views
@@ -35,18 +51,6 @@ Example load command:
 ```sql
 COPY transactions FROM 'transactions.csv' DELIMITER ',' CSV HEADER;
 ```
-
-## Dashboard
-**Worksheets:** Revenue · Sales Quantity · Revenue by Markets · Sales Quantity by Market · Top 5 Customers · Top 10 Products · Year · Month · Revenue by Year · Dashboard 1
-
-**Visuals on Dashboard 1:**
-- KPI cards — Total Revenue, Sales Quantity
-- Bar chart — Revenue by Market
-- Bar chart — Sales Quantity by Market
-- Line chart — Revenue by Month, split by year (2017–2020)
-- Bar chart — Top 5 Products
-- Bar chart — Top 5 Customers
-- Year / Month filters for time-based drill-down
 
 ## Key Insights
 1. **Delhi NCR drives over half of total revenue** — $520.79M of the $986.64M total (~53%), more than 3× Mumbai, the #2 market at $150.18M.
